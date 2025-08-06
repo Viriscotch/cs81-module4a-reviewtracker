@@ -8,13 +8,21 @@ const readingLog = [
   { day: "Friday", book: "1984", minutes: 15 }
 ];
 
-// Adds a new reading entry to the log
+/*
+Adds a new reading entry to the reading log.
+Input: day (string), book (string), minutes (number)
+Output: none (modifies readingLog array in place)
+*/
 function addReadBook(day, book, minutes) {
   const newEntry = { day, book, minutes };  // Create a new reading record
   readingLog.push(newEntry);                // Append it to the reading log
 }
 
-// Returns total minutes spent reading all week
+/*
+Calculates the total number of reading minutes in the given log.
+Input: log (array of reading entries)
+Output: total minutes (number)
+*/
 function totalReadingMinutes(log) {
   let total = 0;
   for (let entry of log) {
@@ -23,7 +31,11 @@ function totalReadingMinutes(log) {
   return total;
 }
 
-// Returns the book read most frequently
+/*
+Determines which book was read most frequently in the log.
+Input: log (array of reading entries)
+Output: most-read book title (string)
+*/
 function mostReadBook(log) {
   const bookCounts = {};  // Count how many times each book appears
   for (let entry of log) {
@@ -45,7 +57,11 @@ function mostReadBook(log) {
   return maxBook;
 }
 
-// Prints a summary of minutes read per day
+/*
+Prints a daily summary of reading activity to the console.
+Input: log (array of reading entries)
+Output: none (prints to console)
+ */
 function printDailySummary(log) {
   for (let entry of log) {
     console.log(`${entry.day}: ${entry.minutes} mins reading "${entry.book}"`);
