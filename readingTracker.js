@@ -73,3 +73,12 @@ addReadBook("Saturday", "Dune", 50);  // Adds a new log for Saturday
 printDailySummary(readingLog);  // Print summary of all entries
 console.log("Total minutes read:", totalReadingMinutes(readingLog));  // Display total reading time
 console.log("Most read book:", mostReadBook(readingLog)); // Show most frequently read book
+/* ------------------------
+Suggested Improvement:
+Consider renaming 'addReadBook' to 'logReadingEntry' for better clarity.
+The current name sounds like reading a book instead of recording data.
+
+------------------------*/
+
+// Additional test cases
+addReadBook("Sunday", "The Hobbit", 60); // New test case: add another entry
